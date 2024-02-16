@@ -93,8 +93,12 @@ void main(){
        print("Your Score Is : $score/${questionEnglish.length}");
   }
 
-         //............Physics MCQs Start............
+                 //............Physics MCQs Start............
     
      physics(){
 
      }
+
+                 //............General Knowledge............
+
+      generalKnowledge(){}
