@@ -3,6 +3,7 @@
 import 'dart:io';
 
 void main(){
+           
     print("Welcome To Quaiz Project");
     print("*************************");
     print("Please Select The Subject");
@@ -96,6 +97,48 @@ void main(){
                  //............Physics MCQs Start............
     
      physics(){
+        List<Map<String , dynamic>> questionphysics = [
+      {
+        "Question" : "",
+        "Options" : [""],
+        "Answer" : ""
+      },
+      {
+        "Question" : "",
+        "Options" : [""],
+        "Answer" : ""
+      },
+      {
+        "Question" : "",
+        "Options" : [""],
+        "Answer" : ""
+      },
+      {
+        "Question" : "",
+        "Options" : [""],
+        "Answer" : ""
+      },
+      {
+        "Question" : "",
+        "Options" : [""],
+        "Answer" : ""
+      },
+      {
+        "Question" : "",
+        "Options" : [""],
+        "Answer" : ""
+      },
+      {
+        "Question" : "",
+        "Options" : [""],
+        "Answer" : ""
+      },
+      {
+        "Question" : "",
+        "Options" : [""],
+        "Answer" : ""
+      }
+    ];
 
      }
 
