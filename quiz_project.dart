@@ -4,6 +4,7 @@ import 'dart:io';
 
 void main(){
            
+    print("-------------------------");       
     print("Welcome To Quaiz Project");
     print("*************************");
     print("Please Select The Subject");
@@ -15,11 +16,11 @@ void main(){
       if (userInput == "1") {
          english();
       } else if(userInput == "2") {
-        
+         physics();
       }else if(userInput == "3"){
          
       }else {
-        print("Wrong Selestion");
+        print("Wrong Selection");
       }
 
       print("Hope You Enjoy It..........");
@@ -87,7 +88,7 @@ void main(){
           print("Your Answer Is Correct");
         score++;
         } else {
-           print("Your Answer Is Not Correct");
+           print("Your Answer Is Incorrect");
         }
       }
       print("**********************");
@@ -99,46 +100,67 @@ void main(){
      physics(){
         List<Map<String , dynamic>> questionphysics = [
       {
-        "Question" : "",
-        "Options" : [""],
-        "Answer" : ""
+        "Question" : "What is the value of Triple point of water?",
+        "Options" : ["273.16 K", "273.16° C", "0° C", "-273.16 K"],
+        "Answer" : "273.16 K"
       },
       {
-        "Question" : "",
-        "Options" : [""],
-        "Answer" : ""
+        "Question" : "Which of the following is NOT correct about units of work:",
+        "Options" : ["1 kg-m = 1 joule", "1 joule = 107 ergs", "1 kg-m = 9.8 joule", "1 joule = 1 Nm"],
+        "Answer" : "1 kg-m = 1 joule"
       },
       {
-        "Question" : "",
-        "Options" : [""],
-        "Answer" : ""
+        "Question" : "Which of these represent the Angular momentum of a satellite?",
+        "Options" : ["mvr", "ma", "mr","mvh"],
+        "Answer" : "mvr"
       },
       {
-        "Question" : "",
-        "Options" : [""],
-        "Answer" : ""
+        "Question" : "Which of the following factors affect the Surface Tension?",
+        "Options" : ["Nature of liquid", "Area of Surface", "Both a and b", "None"],
+        "Answer" : "Nature of liquid"
       },
       {
-        "Question" : "",
-        "Options" : [""],
-        "Answer" : ""
+        "Question" : "“Svedberg Unit” is a unit of _________?",
+        "Options" : ["Time", "Concentration", "Size", "Density"],
+        "Answer" : "Time"
       },
       {
-        "Question" : "",
-        "Options" : [""],
-        "Answer" : ""
+        "Question" : "What is the fourth state of matter called?",
+        "Options" : ["Plasma", "Gas", "Liquid", "Solid"],
+        "Answer" : "Plasma"
       },
       {
-        "Question" : "",
-        "Options" : [""],
-        "Answer" : ""
+        "Question" : "What happens to a body when its density is equal to the density of the fluid?",
+        "Options" : ["it remains suspended", "it sinks", " it floats", "None"],
+        "Answer" : "it remains suspended"
       },
       {
-        "Question" : "",
-        "Options" : [""],
+        "Question" : "What do we call the centre of gravity of the liquid displaced by a body?",
+        "Options" : ["centre of buoyancy", "meta-centre", "fluidic centre", "None"],
         "Answer" : ""
       }
     ];
+           int score = 0;
+           for(var i = 0; i<questionphysics.length;i++){
+            Map<String,dynamic> question = questionphysics[i];
+            print("Question ${i + 1} : ${question["Question"]}");
+
+            for (var j = 0; j < question["Options"].length; j++) {
+              print("${j + 1}. ${question["Options"][j]}");
+            }
+
+             print("Your Answer In Number (1-4)");
+             int answer = int.parse(stdin.readLineSync()!);
+             if (question["Options"][answer - 1] == question["Answer"]) {
+               print("Your Answer Is Correct");
+               score++;
+             } else {
+               print("Your Answer Is Incorrect");
+             }
+             print("**********************");
+             print("Your Score Is : $score/${questionphysics.length}");
+             print("----------------------");
+           }    
 
      }
 
