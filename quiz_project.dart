@@ -18,13 +18,13 @@ void main(){
       } else if(userInput == "2") {
          physics();
       }else if(userInput == "3"){
-         
+         generalKnowledge();
       }else {
         print("Wrong Selection");
       }
 
-      print("Hope You Enjoy It..........");
-      print("Thank You..........");
+      print("Hope You Enjoy It.");
+      print("Thank You.");
   }
 
                   //............Englis MCQs Start............
@@ -92,7 +92,8 @@ void main(){
         }
       }
       print("**********************");
-       print("Your Score Is : $score/${questionEnglish.length}");
+      print("Your Score Is : $score/${questionEnglish.length}");
+      print("----------------------");
   }
 
                  //............Physics MCQs Start............
@@ -137,7 +138,7 @@ void main(){
       {
         "Question" : "What do we call the centre of gravity of the liquid displaced by a body?",
         "Options" : ["centre of buoyancy", "meta-centre", "fluidic centre", "None"],
-        "Answer" : ""
+        "Answer" : "centre of buoyancy"
       }
     ];
            int score = 0;
@@ -157,6 +158,7 @@ void main(){
              } else {
                print("Your Answer Is Incorrect");
              }
+             
              print("**********************");
              print("Your Score Is : $score/${questionphysics.length}");
              print("----------------------");
@@ -166,4 +168,70 @@ void main(){
 
                  //............General Knowledge............
 
-      generalKnowledge(){}
+      generalKnowledge(){
+        List<Map<String , dynamic>> questionGeneralKnowledge = [
+      {
+        "Question" : "National code of Pakistan is?",
+        "Options" : ["PK", "PAK", "PAK 1", "None"],
+        "Answer" : "PK"
+      },
+      {
+        "Question" : "Who inaugurated the State Bank of Pakistan?",
+        "Options" : ["Quaid-e-Azam", "Ghulam Muhammad", "Liaquat Ali Khan", "Allama Muhammad Iqbal"],
+        "Answer" : "Quaid-e-Azam"
+      },
+      {
+        "Question" : "Where is Warsak Dam of Pakistan situated?",
+        "Options" : ["Khyber Pakhtunkhwa", "Punjab", "Sindh","Balochistan"],
+        "Answer" : "Khyber Pakhtunkhwa"
+      },
+      {
+        "Question" : "Shakarparrian is situated in?",
+        "Options" : ["Islamabad", "Rawalpindi", "Murree", "Peshawar"],
+        "Answer" : "Islamabad"
+      },
+      {
+        "Question" : "Identify the largest cantonment of Pakistan?",
+        "Options" : ["Kharian Cantt", "Quetta Cantt", "Okara Cantt", "Karachi Cantt"],
+        "Answer" : "Kharian Cantt"
+      },
+      {
+        "Question" : "Which city of Pakistan held the OIC Conference in 1997?",
+        "Options" : ["Islamabad", "Karachi", "Lahore", "Peshawar"],
+        "Answer" : "Islamabad"
+      },
+      {
+        "Question" : "In which year was OIC founded?",
+        "Options" : ["1969", "1980", "1975", "1970"],
+        "Answer" : "1969"
+      },
+      {
+        "Question" : "The Kargil incident happened in?",
+        "Options" : ["1999", "1998", "2001", "1996"],
+        "Answer" : "1999"
+      }
+    ];
+       int score = 0;
+     for (var i = 0; i < questionGeneralKnowledge.length; i++) {
+      Map<String , dynamic> question = questionGeneralKnowledge[i];
+      print("Question${i + 1} . ${question["Question"]}");
+
+      for (var j = 0; j < question["Options"].length; j++) {
+      print("${j + 1}.${question["Options"][j]}");
+      }
+
+      print("Your Answer In Numbers (1-4)");
+      int answer = int.parse(stdin.readLineSync()!);
+      if (question["Options"][answer - 1] == question["Answer"]) {
+        print("Your Answer Is Correct");
+        score++;
+      } else {
+        print("Your Answer Is Incorrect");
+      }
+       
+       print("**********************");
+       print("Your Score Is : $score/${questionGeneralKnowledge.length}");
+       print("----------------------");
+     }
+     
+      }
