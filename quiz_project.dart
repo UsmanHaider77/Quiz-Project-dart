@@ -4,7 +4,14 @@ import 'dart:io';
 
 void main(){
            
-    print("-------------------------");       
+         print("Enter Your Name");
+     String? name = stdin.readLineSync();
+         print("Enter Your ID");
+     String? id = stdin.readLineSync();
+     bool isLogin = true;
+     while (isLogin==true) {
+       if (name=="Usman" && id=="12345") {
+           print("                  ");       
     print("Welcome To Quaiz Project");
     print("*************************");
     print("Please Select The Subject");
@@ -25,6 +32,18 @@ void main(){
 
       print("Hope You Enjoy It.");
       print("Thank You.");
+           isLogin=false;
+       } else {
+         print("Login Failed");
+         print("Try Again");
+         print("====================");
+         print("Enter Your Name");
+         name = stdin.readLineSync()!;
+         print("Enter Your ID");
+         id = stdin.readLineSync()!;
+       }
+     }
+     
   }
 
                   //............Englis MCQs Start............
@@ -86,14 +105,16 @@ void main(){
 
         if (question["Options"][answer - 1]== question["Answer"]) {
           print("Your Answer Is Correct");
+          print("----------------------");
         score++;
         } else {
            print("Your Answer Is Incorrect");
+           print("------------------------");
         }
       }
       print("**********************");
       print("Your Score Is : $score/${questionEnglish.length}");
-      print("----------------------");
+      print("**********************");
   }
 
                  //............Physics MCQs Start............
@@ -154,15 +175,17 @@ void main(){
              int answer = int.parse(stdin.readLineSync()!);
              if (question["Options"][answer - 1] == question["Answer"]) {
                print("Your Answer Is Correct");
+               print("----------------------");
                score++;
              } else {
                print("Your Answer Is Incorrect");
+               print("------------------------");
              }
-             
+           }  
+
              print("**********************");
              print("Your Score Is : $score/${questionphysics.length}");
-             print("----------------------");
-           }    
+             print("**********************");  
 
      }
 
@@ -224,14 +247,17 @@ void main(){
       int answer = int.parse(stdin.readLineSync()!);
       if (question["Options"][answer - 1] == question["Answer"]) {
         print("Your Answer Is Correct");
+        print("----------------------");
         score++;
       } else {
         print("Your Answer Is Incorrect");
+        print("------------------------");
       }
-       
+    
+     }
+
        print("**********************");
        print("Your Score Is : $score/${questionGeneralKnowledge.length}");
-       print("----------------------");
-     }
+       print("**********************");
      
       }
