@@ -11,15 +11,15 @@ void main(){
      bool isLogin = true;
      while (isLogin==true) {
        if (name=="Usman" && id=="12345") {
-           print("                  ");       
+    print("                    ");       
     print("Welcome To Quaiz Project");
-    print("*************************");
+    print("************************");
     print("Please Select The Subject");
     print("1. English");
     print("2. Physics");
     print("3. General Knowledge");
 
-    String userInput = stdin.readLineSync() as String;
+    String? userInput = stdin.readLineSync();
       if (userInput == "1") {
          english();
       } else if(userInput == "2") {
